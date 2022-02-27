@@ -1,0 +1,70 @@
+---
+title: "Intro_R_tipodedatos"
+author: "Genesis Jima"
+date: "26/2/2022"
+output: 
+ html_document:
+    fig_height: 6
+    fight_width: 8
+    theme: journal
+    highlight: zenburn
+    toc: yes
+    toc_depht: 4
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## TAREA 1:TIPOS DE DATOS
+### Ejercicio 1
+```{r ejercicio 1}
+# ejercicio1: 
+ciudad <- "Carchi"
+print(ciudad)
+```
+### Ejercicio 2
+```{r ejercicio 2}
+# ejercicio2: 
+pais_andes <- c("Bolivia", "Chile", "Ecuador", "Perú", "Colombia", "Venezuela", "Argentina")
+print(pais_andes)
+```
+
+### Ejercicio 3
+```{r ejercicio 3}
+# ejercicio3:
+elementos_propiedades <- data.frame(identador = seq(1:12),
+                                    simbolo = c("H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg"),
+                                    punto_fusion = c(-259.1,  -272.2, 180.5, 1278.0, 2079.0, 3367.0, -209.9, -218.4, -219.8, -248.0, 97.8, 649.0),
+                                    punto_ebullucion = c(-252.9, -268.9, 1342.0, 2970.0, 2550.0, 4827.0, -195.8, -183.0, -188.1, -248.7, 883.0, 1090.0),
+                                    peso_atomico = c(1.008, 4.0026, 6.941, 9.012, 10.81, 12.01, 14.01, 16.00, 19.00, 20.18, 22.99, 24.31))#gmol
+elementos_propiedades
+
+```
+
+
+### Ejercicio 4
+```{r ejercicio 4}
+# ejercicio4:
+# dataset"DNase"
+?DNase
+print(head(DNase, 4))
+concentracion = subset(DNase, conc >= 0.1 & conc <= 0.2)
+print(concentracion)
+
+```
+
+
+### Ejercicio 4.2
+```{r ejercicio 4.2}
+# ejercicio4.2:
+# dataset"DNase"
+?DNase
+contenido = subset(DNase, Run != 10 & conc > 0.2 & density <= 1.0)
+print(contenido)
+
+```
+
+
